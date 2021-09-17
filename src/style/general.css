@@ -42,3 +42,9 @@ h2{
 header > .flex{
   justify-content: space-between;
 }
+
+.explication{
+  width: calc(100% / 3);
+  padding: 0 3.125%;
+  flex-shrink: 0;
+}

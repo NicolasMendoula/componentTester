@@ -1,0 +1,44 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: 'Open Sans';
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+p{
+  margin-bottom: 1em;
+}
+/* Structure */
+
+.container{
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+/* Header */
+header{
+  padding: 1.5625% 3.125%;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.25);
+}
+
+section{
+  padding: 3.125% 1.5625%;
+}
+h2{
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.flex{
+  display: flex;
+}
+
+header > .flex{
+  justify-content: space-between;
+}

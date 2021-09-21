@@ -5,6 +5,7 @@
     border: solid 1px #888;
     height: min-content;
 }
+
 .sliderWrapper{
     overflow: hidden;
 }
@@ -19,7 +20,7 @@
     text-transform: uppercase;
     position: absolute;
     padding: 10px;
-    background: #333;
+    background: #111;
     color: #fff;
     border-radius: 5px;
     line-height: 20px;
@@ -34,7 +35,6 @@
 .navBouton:hover{
     top: calc(50% - 13px);
     background-color: rgb(63, 131, 170);
-
 }
 
 #precedent{
@@ -45,11 +45,57 @@
     right: 3.125%;
 }
 
+.sliderContainer.small .navBouton{
+    border-radius: 0;
+    font-size: 0.7em;
+    line-height: 1em;
+    bottom: 0;
+    top: initial;
+}
+.sliderContainer.small #precedent{
+    left: 0;
+}
+.sliderContainer.small #suivant{
+    right: 0;
+}
+
 .slideNext{
     margin-left: 0;
     animation: slideNext 3s forwards;
 }
+.minNavWraper{
+    margin: 3.125% 0 0;
+    overflow: hidden;
+}
+.large + .minNavWraper{
+    height: 100px;
+}
+.medium + .minNavWraper{
+    height: 70px;
+}
+.small + .minNavWraper{
+    height: 30px;
+}
+.minNav{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 -2px;
+}
+.minNav li{
+    flex-grow: 1;
+    list-style: none;
+    padding: 0 2px;
+    cursor: pointer;
+}
 
+.minNav img{
+    width: 100%;
+    filter: brightness(0.5);
+}
+
+.minNav .current img{
+    filter:none;
+}
 @keyframes slideNext {
     0%{
         margin-left: 0;

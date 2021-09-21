@@ -1,10 +1,14 @@
-/* Header générique */
-import logo from "../assets/images/logo.jpg";
+import Menu from './Menu';
+import Meteo from './Meteo/Meteo';
 
-const Header = () =>{
+/* Header générique */
+
+
+const Header = ({listeMenus,smoothScroll}) =>{
     return (<header>
-        <div className="container flex">
-            <img src={logo} alt="logo"/>
+        <div className="flex">
+            <Menu menuList={listeMenus} smoothScroll={smoothScroll} />
+            <Meteo />
         </div>
     </header>);
 } 
